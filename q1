@@ -1,0 +1,115 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+
+using namespace std;
+
+int addition (int x, int y)
+{
+int n;
+n = x + y;
+return n;
+}
+
+int subtraction (int x, int y)
+{
+int n;
+n = x - y;
+return n;
+}
+
+int multiplication (int x, int y)
+{
+int n;
+n = x * y;
+return n;
+}
+
+int division (int x, int y)
+{
+int n;
+n = x / y;
+return n;
+}
+
+int modulo (int x, int y)
+{
+int n;
+n = x % y;
+return n;
+}
+
+int main()
+{
+	int x, m, z, mtb, cml;
+	char ans = 'y';
+	
+	while (ans == 'y')
+	{
+	cout << "\n CHOICES: \n" << endl;
+	cout << "1. ADDITION" << endl;
+	
+	cout << "2. SUBTRACT" << endl;
+	
+	cout << "3. MULTIPLY" << endl;
+	
+	cout << "4. DIVIDE" << endl;
+	
+	cout << "5. MODULO\n" << endl;
+	
+	
+	cout << "Enter your choice: ";
+    cin >> x;
+	cout << "Enter your two numbers: ";
+
+	cin >> mtb >> cml;
+		
+	switch(x)
+		{
+			case 1:
+				z = addition (mtb, cml);
+				cout << "Result: " << z;
+				break;
+			case 2:
+				z = subtraction (mtb, cml);
+				cout << "Result: " << z;
+				break;
+			case 3:
+				z = multiplication (mtb, cml);
+				cout << "Result: " << z;
+				break;
+			case 4:
+				z = division (mtb, cml);
+				cout << "Result: " << z;
+				break;
+			case 5:
+				z = modulo (mtb, cml);
+				cout << "Result: " << z;
+				break;
+			default:
+				cout << "Invalid!";
+				break;
+		}
+	
+	cout << "\nContinue? (y/n)";
+	cin >> ans;
+	cout << "\n";
+	
+	switch (ans)
+	{
+		case 'y':
+		case 'Y':
+			{
+				continue;
+			}
+		default:
+			{
+				break;
+			}
+	}
+	
+	} 
+	
+	_getch();
+	return 0;
+}
