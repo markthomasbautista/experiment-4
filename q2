@@ -1,0 +1,52 @@
+#include <iostream>
+#include <conio.h>
+
+
+using namespace std;
+
+int main()
+{
+	int a, b, c, d, arr[100];
+	
+	cout << "Array size? : "; cin >> a;
+	cout << "Type " << a << " elements? : " << endl;
+	
+	for (d = 0; d < a; d++)
+	{
+		cin >> arr[d];
+	}
+	
+	cout << "Elements : " << endl;
+	
+	for (d = 0; d < a; d++)
+	{
+		cout << arr[d] << ", ";
+	}
+	
+	cout << endl;
+	
+	for (d = 0; d < a; d++)
+	{
+		for (c = d + 1; c < a ; c++)
+		{
+			if (arr[d] > arr[c])
+			{
+				b = arr[c];
+				arr[c] = arr[d];
+				arr[d] = b;
+			}
+		}
+	}
+	
+	cout << endl;
+	
+	cout << "Elements after selection sort : ";
+	
+	for (d = 0; d < a; d++)
+	{
+		cout << arr[d] << ", ";
+	}
+	
+	_getch();
+	return 0;
+}
